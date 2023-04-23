@@ -158,7 +158,17 @@ static bool isRussian(int beg, int end)
     return false;
 }
 
-static bool fix_name(std::string const& old_name, std::string& new_name)
+using result = std::pair<std::string, bool>;
+
+static result remove_leading_dashes(std::string const& fname)
+{
+    size_t pos = fname.find_first_not_of("-");
+    if (pos != std::string::npos) { return std::make_pair(fname.substr(pos), pos != 0); }
+    // The whole name consists of dashes only - select some name
+    return std::make_pair("all_dashes_name", true);
+}
+
+static bool fix_symbols(std::string const& old_name, std::string& new_name)
 {
     new_name.resize(0);
     bool changed = false;
@@ -210,6 +220,13 @@ static bool fix_name(std::string const& old_name, std::string& new_name)
     //printf("\ncount: %lu, old size: %lu, new size: %lu\n", count, old_name.size(), new_name.size());
 
     return changed;
+}
+
+static bool fix_name(std::string const& old_name, std::string& new_name)
+{
+    result res = remove_leading_dashes(old_name);
+    bool changed = fix_symbols(res.first, new_name);
+    return res.second || changed;
 }
 
 static int move_file(char const* old_path, char const* new_path)
