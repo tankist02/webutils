@@ -1,0 +1,99 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BREAD_CRUMBS_H	./BreadCrumbs.h	2;"	d
+BreadCrumbs	./BreadCrumbs.h	/^class BreadCrumbs$/;"	c
+BreadCrumbs.cpp	./BreadCrumbs.cpp	1;"	F
+BreadCrumbs.h	./BreadCrumbs.h	1;"	F
+BreadCrumbs::Subdirs	./BreadCrumbs.h	/^    typedef std::vector<std::string> Subdirs;$/;"	t	class:BreadCrumbs
+BreadCrumbs::empty	./BreadCrumbs.h	/^    bool empty() const { return subdirs_.empty(); }$/;"	f	class:BreadCrumbs
+BreadCrumbs::getHtml	./BreadCrumbs.cpp	/^std::string BreadCrumbs::getHtml() const$/;"	f	class:BreadCrumbs
+BreadCrumbs::linkFormat_	./BreadCrumbs.h	/^    std::string linkFormat_;$/;"	m	class:BreadCrumbs
+BreadCrumbs::loadTemplates	./BreadCrumbs.cpp	/^void BreadCrumbs::loadTemplates(char const* dir)$/;"	f	class:BreadCrumbs
+BreadCrumbs::pop	./BreadCrumbs.h	/^    void pop() { assert(!subdirs_.empty()); Subdirs::iterator last = subdirs_.end(); --last; subdirs_.erase(last); }$/;"	f	class:BreadCrumbs
+BreadCrumbs::push	./BreadCrumbs.h	/^    void push(std::string const& v) { subdirs_.push_back(v); }$/;"	f	class:BreadCrumbs
+BreadCrumbs::size	./BreadCrumbs.h	/^    size_t size() const { return subdirs_.size(); }$/;"	f	class:BreadCrumbs
+BreadCrumbs::subdirs_	./BreadCrumbs.h	/^    Subdirs subdirs_;$/;"	m	class:BreadCrumbs
+HTML_GENERATOR_H	./htmlGenerator.h	2;"	d
+HtmlGenerator	./htmlGenerator.cpp	/^HtmlGenerator::HtmlGenerator($/;"	f	class:HtmlGenerator
+HtmlGenerator	./htmlGenerator.h	/^class HtmlGenerator$/;"	c
+HtmlGenerator::HtmlGenerator	./htmlGenerator.cpp	/^HtmlGenerator::HtmlGenerator($/;"	f	class:HtmlGenerator
+HtmlGenerator::Images	./htmlGenerator.h	/^    typedef std::vector< std::string > Images;$/;"	t	class:HtmlGenerator
+HtmlGenerator::breadCrumbs	./htmlGenerator.h	/^    BreadCrumbs breadCrumbs;$/;"	m	class:HtmlGenerator
+HtmlGenerator::dirData	./htmlGenerator.h	/^    std::string dirData;$/;"	m	class:HtmlGenerator
+HtmlGenerator::epilogue	./htmlGenerator.h	/^    std::string epilogue;$/;"	m	class:HtmlGenerator
+HtmlGenerator::firstPage	./htmlGenerator.h	/^    std::string firstPage;$/;"	m	class:HtmlGenerator
+HtmlGenerator::generateLinkFile	./htmlGenerator.cpp	/^int HtmlGenerator::generateLinkFile($/;"	f	class:HtmlGenerator
+HtmlGenerator::images	./htmlGenerator.h	/^    Images images;$/;"	m	class:HtmlGenerator
+HtmlGenerator::imagesCount	./htmlGenerator.h	/^    int imagesCount;$/;"	m	class:HtmlGenerator
+HtmlGenerator::indexCount	./htmlGenerator.h	/^    int indexCount;$/;"	m	class:HtmlGenerator
+HtmlGenerator::lastPage	./htmlGenerator.h	/^    std::string lastPage;$/;"	m	class:HtmlGenerator
+HtmlGenerator::linkCount	./htmlGenerator.h	/^    int linkCount;$/;"	m	class:HtmlGenerator
+HtmlGenerator::loadImages	./htmlGenerator.cpp	/^size_t HtmlGenerator::loadImages(char const* const ext)$/;"	f	class:HtmlGenerator
+HtmlGenerator::loadTemplates	./htmlGenerator.cpp	/^void HtmlGenerator::loadTemplates()$/;"	f	class:HtmlGenerator
+HtmlGenerator::middlePage	./htmlGenerator.h	/^    std::string middlePage;$/;"	m	class:HtmlGenerator
+HtmlGenerator::previewLink	./htmlGenerator.h	/^    std::string previewLink;$/;"	m	class:HtmlGenerator
+HtmlGenerator::printStats	./htmlGenerator.cpp	/^int HtmlGenerator::printStats()$/;"	f	class:HtmlGenerator
+HtmlGenerator::process	./htmlGenerator.cpp	/^int HtmlGenerator::process(std::string const& html_up)$/;"	f	class:HtmlGenerator
+HtmlGenerator::processDir	./htmlGenerator.cpp	/^std::string HtmlGenerator::processDir()$/;"	f	class:HtmlGenerator
+HtmlGenerator::processSubdirs	./htmlGenerator.cpp	/^int HtmlGenerator::processSubdirs(std::string const& html_up)$/;"	f	class:HtmlGenerator
+HtmlGenerator::prologue	./htmlGenerator.h	/^    std::string prologue;$/;"	m	class:HtmlGenerator
+HtmlGenerator::showForms	./htmlGenerator.h	/^    bool showForms;$/;"	m	class:HtmlGenerator
+HtmlGenerator::singlePage	./htmlGenerator.h	/^    std::string singlePage;$/;"	m	class:HtmlGenerator
+HtmlGenerator::subDirCount	./htmlGenerator.h	/^    int subDirCount;$/;"	m	class:HtmlGenerator
+HtmlGenerator::templDir	./htmlGenerator.h	/^    std::string templDir;$/;"	m	class:HtmlGenerator
+HtmlGenerator::top_level_prologue	./htmlGenerator.h	/^    std::string top_level_prologue;$/;"	m	class:HtmlGenerator
+HtmlGenerator::~HtmlGenerator	./htmlGenerator.h	/^    ~HtmlGenerator()$/;"	f	class:HtmlGenerator
+Images	./htmlGenerator.h	/^    typedef std::vector< std::string > Images;$/;"	t	class:HtmlGenerator
+Subdirs	./BreadCrumbs.h	/^    typedef std::vector<std::string> Subdirs;$/;"	t	class:BreadCrumbs
+UTILS_H	./utils.h	2;"	d
+breadCrumbs	./htmlGenerator.h	/^    BreadCrumbs breadCrumbs;$/;"	m	class:HtmlGenerator
+dirData	./htmlGenerator.h	/^    std::string dirData;$/;"	m	class:HtmlGenerator
+empty	./BreadCrumbs.h	/^    bool empty() const { return subdirs_.empty(); }$/;"	f	class:BreadCrumbs
+epilogue	./htmlGenerator.h	/^    std::string epilogue;$/;"	m	class:HtmlGenerator
+firstPage	./htmlGenerator.h	/^    std::string firstPage;$/;"	m	class:HtmlGenerator
+formatDirLevel	./utils.cpp	/^std::string formatDirLevel(int level)$/;"	f
+generateLinkFile	./htmlGenerator.cpp	/^int HtmlGenerator::generateLinkFile($/;"	f	class:HtmlGenerator
+getHtml	./BreadCrumbs.cpp	/^std::string BreadCrumbs::getHtml() const$/;"	f	class:BreadCrumbs
+getOrientation	./htmlGenerator.cpp	/^char const* getOrientation(char const* image_file)$/;"	f
+getRoot	./main.cpp	/^static std::string getRoot(char const* pname, char const* suffix)$/;"	f	file:
+htmlGenerator.cpp	./htmlGenerator.cpp	1;"	F
+htmlGenerator.h	./htmlGenerator.h	1;"	F
+images	./htmlGenerator.h	/^    Images images;$/;"	m	class:HtmlGenerator
+imagesCount	./htmlGenerator.h	/^    int imagesCount;$/;"	m	class:HtmlGenerator
+indexCount	./htmlGenerator.h	/^    int indexCount;$/;"	m	class:HtmlGenerator
+lastPage	./htmlGenerator.h	/^    std::string lastPage;$/;"	m	class:HtmlGenerator
+linkCount	./htmlGenerator.h	/^    int linkCount;$/;"	m	class:HtmlGenerator
+linkFormat_	./BreadCrumbs.h	/^    std::string linkFormat_;$/;"	m	class:BreadCrumbs
+loadImages	./htmlGenerator.cpp	/^size_t HtmlGenerator::loadImages(char const* const ext)$/;"	f	class:HtmlGenerator
+loadTemplateFile	./utils.cpp	/^int loadTemplateFile(char const* templ_dir, char const* const fname, std::string& templ)$/;"	f
+loadTemplates	./BreadCrumbs.cpp	/^void BreadCrumbs::loadTemplates(char const* dir)$/;"	f	class:BreadCrumbs
+loadTemplates	./htmlGenerator.cpp	/^void HtmlGenerator::loadTemplates()$/;"	f	class:HtmlGenerator
+main	./main.cpp	/^int main(int argc, char* argv[])$/;"	f
+main.cpp	./main.cpp	1;"	F
+makeSubtitle	./utils.cpp	/^std::string makeSubtitle(std::string const& subdir)$/;"	f
+makeTitle	./utils.cpp	/^std::string makeTitle(std::string const& dir)$/;"	f
+middlePage	./htmlGenerator.h	/^    std::string middlePage;$/;"	m	class:HtmlGenerator
+pop	./BreadCrumbs.h	/^    void pop() { assert(!subdirs_.empty()); Subdirs::iterator last = subdirs_.end(); --last; subdirs_.erase(last); }$/;"	f	class:BreadCrumbs
+previewLink	./htmlGenerator.h	/^    std::string previewLink;$/;"	m	class:HtmlGenerator
+printStats	./htmlGenerator.cpp	/^int HtmlGenerator::printStats()$/;"	f	class:HtmlGenerator
+process	./htmlGenerator.cpp	/^int HtmlGenerator::process(std::string const& html_up)$/;"	f	class:HtmlGenerator
+processDir	./htmlGenerator.cpp	/^std::string HtmlGenerator::processDir()$/;"	f	class:HtmlGenerator
+processSubdirs	./htmlGenerator.cpp	/^int HtmlGenerator::processSubdirs(std::string const& html_up)$/;"	f	class:HtmlGenerator
+prologue	./htmlGenerator.h	/^    std::string prologue;$/;"	m	class:HtmlGenerator
+push	./BreadCrumbs.h	/^    void push(std::string const& v) { subdirs_.push_back(v); }$/;"	f	class:BreadCrumbs
+removeExt	./utils.cpp	/^std::string removeExt(std::string const& fname)$/;"	f
+showForms	./htmlGenerator.h	/^    bool showForms;$/;"	m	class:HtmlGenerator
+singlePage	./htmlGenerator.h	/^    std::string singlePage;$/;"	m	class:HtmlGenerator
+size	./BreadCrumbs.h	/^    size_t size() const { return subdirs_.size(); }$/;"	f	class:BreadCrumbs
+subDirCount	./htmlGenerator.h	/^    int subDirCount;$/;"	m	class:HtmlGenerator
+subdirs_	./BreadCrumbs.h	/^    Subdirs subdirs_;$/;"	m	class:BreadCrumbs
+templDir	./htmlGenerator.h	/^    std::string templDir;$/;"	m	class:HtmlGenerator
+top_level_prologue	./htmlGenerator.h	/^    std::string top_level_prologue;$/;"	m	class:HtmlGenerator
+usage	./main.cpp	/^static void usage(char const* const prog)$/;"	f	file:
+utils.cpp	./utils.cpp	1;"	F
+utils.h	./utils.h	1;"	F
+~HtmlGenerator	./htmlGenerator.h	/^    ~HtmlGenerator()$/;"	f	class:HtmlGenerator

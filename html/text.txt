@@ -1,0 +1,2 @@
+Sample text.
+Another text on a new line.

@@ -1,0 +1,9 @@
+# Build parsers:
+
+# This parses *.shtml files and produces inputs for databse women.data and children.data
+gcc -Wall -o data_parser data_parser.cpp
+
+
+# This parses *.shtml files and produces input for databse images.data
+gcc -Wall -o images_parser images_parser.cpp
+

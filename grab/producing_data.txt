@@ -1,0 +1,23 @@
+All original jpeg images were downloaded using wget -r (recursive)
+
+
+Manual filtering out only the best images was performed.
+
+
+shtml files corresponding to the best images were filtered out by the cull.sh script:
+
+cd dir_with_shtml_files
+./cull.sh dir_with_best_images/*.jpg
+
+
+Directory 'good' that contains best shtml is created and populated.
+
+
+Parse best shtml files for women, children and images data:
+
+../data_parser good/*.shtml
+../images_parser good/*.shmtl
+
+
+Text files women.data, children.data and images.data containing data to be transferred
+to the database are created.

@@ -1,0 +1,37 @@
+%.preview: %.jpg
+	convert -define jpeg:size=300x300 $< -thumbnail 200x200^ -gravity center -extent 200x200 $@
+
+%.small: %.jpg
+	convert $< -resize 600x600 $@
+
+%.medium: %.jpg
+	convert $< -resize 1000x1000 $@
+
+%.large: %.jpg
+	convert $< -resize 2000x2000 $@
+
+ORIGINALS := $(wildcard *.jpg)
+PREVIEWS :=  $(patsubst %.jpg, %.preview, $(ORIGINALS))
+SMALLS :=  $(patsubst %.jpg, %.small, $(ORIGINALS))
+MEDIUMS :=  $(patsubst %.jpg, %.medium, $(ORIGINALS))
+LARGES :=  $(patsubst %.jpg, %.large, $(ORIGINALS))
+
+.PHONY: all
+all: previews smalls mediums larges
+
+.PHONY: previews
+previews: $(PREVIEWS)
+
+.PHONY: smalls
+smalls: $(SMALLS)
+
+.PHONY: mediums
+mediums: $(MEDIUMS)
+
+.PHONY: larges
+larges: $(LARGES)
+
+.PHONY: clean
+clean:
+	rm -f $(PREVIEWS) $(SMALLS) $(MEDIUMS) $(LARGES)
+

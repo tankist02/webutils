@@ -1,0 +1,29 @@
+<html>
+<head>
+<script type="text/javascript" src="/global_scripts.js"></script>
+<script type="text/javascript" src="%s.js"></script>
+<meta charset="UTF-8">
+<style type="text/css">
+<!--
+a { text-decoration:none }
+-->
+</style>
+<title>%s.jpg</title>
+</head>
+
+<body bgcolor='#000000' text='#ffffff' link='#ffffff' vlink='#ffffff' alink='#ffffff'>
+
+<script type="text/javascript">
+var language = getQueryVariable("language");
+var size = getQueryVariable("size");
+document.write("<center>");
+document.write("<a href='%s?language=" + language + "&size=" + size + "'><img src='/arrow-up.png' width='30'></a>");
+document.write("<a href='%s.html?language=" + language + "&size=" + size + "'><img src='/arrow-right.png' width='30'></a>");
+document.write("</center>");
+document.write("<center><img src='%s." + size + "' %s%%'></center>");
+displayText();
+</script>
+
+</body>
+</html>
+

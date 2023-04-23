@@ -1,0 +1,27 @@
+Algorithm goal: find out the best HTML entries, remove all others
+
+1. Download all possible JPEG entries and manually select the best.
+   Use: wget -r root_url.
+
+
+2. From JPEG entries select the keys and store them in file keys.txt.
+   Use: find . -name '??????.jpg' -execdir basename '{}' .jpg \; > keys.txt
+
+
+3. Load generated unique keys into HTML parser program.
+   Use: html_parser keys.txt
+
+   The program stores the keys internally in the std::set object.
+
+
+4. Supply HTML entries to the parser program.
+   Use: find . -maxdepth 1 *.shtml | xargs html_parser
+
+
+5. For every HTML entry extract the key it contains.
+
+6. Check if the key is in the keys database.
+
+7. If it is not move the HTML entry to junk.
+
+

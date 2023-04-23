@@ -1,0 +1,6 @@
+log_path=H:/users/andrewt/web_site/LogFiles/Apache
+log_path=H:/users/andrewt/web_site\LogFiles\W3SVC3
+#ignore_ip=24.15.211.39
+ignore_ip=24.15.211.40
+ip_hits_threshold=2
+image_hits_threshold=1

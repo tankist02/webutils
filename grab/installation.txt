@@ -1,0 +1,27 @@
+Installation (for (K)Ubuntu):
+
+
+# Install GCC
+sudo apt-get install build-essential
+
+
+# Install wget utility to download files from Internet in command mode
+sudo apt-get install wget
+
+
+# Install PostgreSQL
+Download sources from (change 8.1.3 to latest): http://www.postgresql.org/ftp/source/v8.1.3/
+Unpack, change to root dev dir, run ./configure, run make, run sudo make install
+
+Configure the new installation:
+
+http://www.postgresql.org/docs/8.1/static/installation.html
+
+
+# Install PGAdmin III:
+sudo apt-get install libwxgtk2.6-dev
+sudo apt-get install libxml2-dev
+
+Download sources from: http://www.pgadmin.org/download/source.php and follow the explanation how to build
+
+

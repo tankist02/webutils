@@ -1,0 +1,74 @@
+To install PostgreSQL server:
+
+cd /usr/ports/database/postgresql82-server
+make install clean
+
+
+To install PostgreSQL client:
+
+cd /usr/ports/database/postgresql82-client
+make install clean
+
+
+To initialize the database, run
+
+  /usr/local/etc/rc.d/postgresql initdb
+
+
+You can then start PostgreSQL by running:
+
+  /usr/local/etc/rc.d/postgresql start
+
+
+To automatically start server when system boots add the line to /etc/rc.conf:
+
+postgresql_enable="YES"
+
+
+To get info on PostgreSQL package:
+
+pkg_info -Dx postgresql-server
+
+
+To create a new database (run as pgsql user):
+
+/usr/local/bin/createdb the-new-database-name
+
+
+To start interactive SQL session (run as pgsql user):
+
+psql database-name
+
+
+To run a script script-name.sql inside psql session:
+
+\i script-name.sql
+
+
+Help inside psql session:
+
+\h
+
+
+Quit from psql session:
+
+\q
+
+
+To install Ruby on Rails interface to PostgreSQL run command:
+
+gem install postgres
+
+If it fails at the compilation stage (did it on FreeBSD prerelease 6.2) then go to
+
+/usr/local/lib/ruby/gems/1.8/gems/postgres-0.7.1
+
+and edit Makefile:
+
+replace -I. with -I/usr/local/include
+
+After that run
+
+make
+make install
+

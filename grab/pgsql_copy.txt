@@ -1,0 +1,2 @@
+copy women from '/home/andrew/dev/web/grab/women.data' USING DELIMITERS '|';
+copy children from '/home/andrew/dev/web/grab/children.data' USING DELIMITERS '|';

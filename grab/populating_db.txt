@@ -1,0 +1,18 @@
+Start PostgreSQL if it is not running (look into start_postmaster.sh script)
+
+Start psql client (look into start_psql.sh script)
+
+In the client:
+
+Create tables:
+
+\i create_tables.sql;
+
+
+Load data from text files (replace my full path with yours):
+
+copy women from '/home/andrew/dev/web/grab/dimych/good/women.data' USING DELIMITERS '|';
+copy children from '/home/andrew/dev/web/grab/dimych/good/children.data' USING DELIMITERS '|';
+copy images from '/home/andrew/dev/web/grab/dimych/good/images.data' USING DELIMITERS '|';
+
+
