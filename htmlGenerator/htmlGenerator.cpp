@@ -30,7 +30,7 @@ HtmlGenerator::HtmlGenerator(
     , linkCount(0)
     , showForms(true)
 {
-    std::replace_if(templDir.begin(), templDir.end(), std::bind2nd(std::equal_to< char >(), '\\'), '/');
+    std::replace_if(templDir.begin(), templDir.end(), std::bind(std::equal_to<char>(), std::placeholders::_1, '\\'), '/');
 
     int len = templDir.length();
     if( len > 0 && templDir[len - 1] != '/' )
@@ -196,7 +196,7 @@ std::string HtmlGenerator::processDir()
         std::cerr << "Failed to getcwd, error: " << strerror(errno) << std::endl;
         exit(-1);
     }
-    std::replace_if(fulldir, fulldir + strlen(fulldir), std::bind2nd(std::equal_to< char >(), '\\'), '/');
+    std::replace_if(fulldir, fulldir + strlen(fulldir), std::bind(std::equal_to<char>(), std::placeholders::_1, '\\'), '/');
     const char* p = strrchr(fulldir, '/');
 
     std::string index_name = p + 1;

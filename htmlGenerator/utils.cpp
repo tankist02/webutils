@@ -17,7 +17,7 @@ std::string makeTitle(std::string const& dir)
 
     std::string title = dir.substr(pos);
 
-    std::replace_if(title.begin(), title.end(), std::bind2nd(std::equal_to< char >(), '_'), ' ');
+    std::replace_if(title.begin(), title.end(), std::bind(std::equal_to<char>(), std::placeholders::_1, '_'), ' ');
     assert(!title.empty());
 
     // Capitalize the first letter and all after white-space
@@ -41,7 +41,7 @@ std::string makeSubtitle(std::string const& subdir)
     else
         subtitle = subdir;
 
-    std::replace_if(subtitle.begin(), subtitle.end(), std::bind2nd(std::equal_to< char >(), '_'), ' ');
+    std::replace_if(subtitle.begin(), subtitle.end(), std::bind(std::equal_to<char>(), std::placeholders::_1, '_'), ' ');
 
     return subtitle;
 }
